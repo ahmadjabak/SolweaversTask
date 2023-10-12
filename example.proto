@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package example;
+option go_package = "github.com/ahmadjabak/SolweaversTask/example";
+
+service MyService {
+  rpc MyMethod (MyRequest) returns (MyResponse);
+}
+
+message MyRequest {
+  string request_data = 1;
+}
+
+message MyResponse {
+  string response_data = 1;
+}
+
